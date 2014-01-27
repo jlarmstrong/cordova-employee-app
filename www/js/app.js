@@ -12,7 +12,21 @@
     $('.help-btn').on('click', function() {
         alert("Some help here...")
     });
+    document.addEventListener('deviceready', function() {
 
+      FastClick.attach(document.body);
+
+      if (navigator.notification) { // Override default HTML alert with native
+        window.alert = function (message) {
+          navigator.notification.alert(
+            message,    //message
+            null,       //callback
+            "Workshop", //title
+            'OK'        //buttonName
+          );
+        };
+      }
+    }, false);
 
     /* ---------------------------------- Local Functions ---------------------------------- */
     function findByName() {

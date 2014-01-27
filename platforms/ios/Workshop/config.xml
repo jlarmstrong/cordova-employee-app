@@ -32,6 +32,9 @@
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
     </feature>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
     <author email="dev@callback.apache.org" href="http://cordova.io">
         Apache Cordova Team
     </author>
